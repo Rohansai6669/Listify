@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ToDo X Link Organizer</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header id="header">
+      <nav>
+        <h1>Listify</h1>
+        <ul>
+          <li><button id="todo">ToDo</button></li>
+          <li><button id="note">Notes</button></li>
+          <li><button id="links">Links</button></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="container">
+      <div id="todoele">
+        <h1>TodoList</h1>
+        <div class="input-section">
+          <input type="text" id="taskInput" placeholder="Enter your task" />
+          <button id="addTaskBtn">Add Task</button>
+        </div>
+        <ul id="taskList"></ul>
+        <button id="clearAllBtn">Clear All Tasks</button>
+      </div>
+      <div id="noteele">
+        <h1>Notes Manager</h1>
+        <div class="flexarr">
+        <div id="notebooks-section">
+          <h2>Notebooks</h2>
+          <input
+            type="text"
+            id="new-notebook-name"
+            placeholder="Notebook name"
+          />
+          <button id="add-notebook">Add Notebook</button>
+          <ul id="notebooks-list"></ul>
+        </div>
+
+        <div id="notes-section" >
+          <h2 id="selected-notebook-title"></h2>
+          <input
+            type="text"
+            id="new-note-content"
+            placeholder="New note content"
+          />
+          <button id="add-note">Add Note</button>
+          <ul id="notes-list"></ul>
+          <!-- <button id="back-to-notebooks">Back to Notebooks</button> -->
+        </div>
+
+        <div id="note-view-section" style="display: none">
+          <h2>Note Details</h2>
+          <textarea id="note-content" style="height:250px;width:90%;margin-top:10px"></textarea>
+          <button id="update-note">Update Note</button>
+          <button id="back-to-notes">Back to Notes</button>
+        </div>
+        </div>
+      </div>
+      <div id="linksele">
+        <h1>Links</h1>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
