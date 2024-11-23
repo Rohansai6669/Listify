@@ -256,6 +256,22 @@ function viewNoteDetails(index) {
   noteContentTextarea.value = notebooks[selectedNotebook][index];
   notesSection.style.display = "none";
   noteViewSection.style.display = "block";
+  if (screenWidth <= 480) {
+    // For small screens
+    noteContent.style.width = "90%";
+    noteContent.style.minheight="80%";
+    noteContent.style.fontSize = "0.9em";
+  } else if (screenWidth <= 768) {
+    // For medium screens
+    noteContent.style.width = "80%";
+    noteContent.style.height = "200px";
+    noteContent.style.fontSize = "1em";
+  } else {
+    // For large screens
+    noteContent.style.width = "80%";
+    noteContent.style.minheight = "80%";
+    noteContent.style.fontSize = "1.2em";
+  }
   
 }
 
