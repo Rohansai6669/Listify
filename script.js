@@ -197,7 +197,7 @@ function openNotebook(notebookName) {
   selectedNotebook = notebookName;
   selectedNotebookTitle.textContent = notebookName;
   updateNotesList();
-  notebooksSection.style.display = "block";
+  notebooksSection.style.display = "none";
   notesSection.style.display = "block";
   noteViewSection.style.display = "none";
 }
@@ -228,7 +228,7 @@ function updateNotesList() {
 
     // Show the first 50 characters as a preview
     const p = document.createElement('p');
-    p.textContent = note.split("\n")[0].slice(0, 50) + "...";
+    p.textContent = note.split("\n")[0].slice(0, 20) + "...";
     li.append(p);
 
     // Add delete button
@@ -268,10 +268,10 @@ document.getElementById("update-note").addEventListener("click", () => {
 });
 
 // Back to notebooks
-// document.getElementById("back-to-notebooks").addEventListener("click", () => {
-//   notesSection.style.display = "none";
-//   notebooksSection.style.display = "block";
-// });
+document.getElementById("back-to-notebooks").addEventListener("click", () => {
+  notesSection.style.display = "none";
+  notebooksSection.style.display = "block";
+});
 
 // Back to notes
 document.getElementById("back-to-notes").addEventListener("click", backToNotes);
