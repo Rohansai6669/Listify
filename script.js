@@ -139,6 +139,15 @@ const noteContentTextarea = document.getElementById("note-content");
 let selectedNotebook = null;
 let selectedNoteIndex = null;
 
+const create=document.getElementById("create");
+const createSection=document.getElementById("create-section");
+const form = document.getElementById('coverForm');
+
+create.addEventListener("click",()=>{
+  createSection.style.display="block";
+  create.style.display="none";
+});
+
 // Save notebooks to localStorage
 function saveNotebooks() {
   localStorage.setItem("notebooks", JSON.stringify(notebooks));
@@ -153,6 +162,11 @@ document.getElementById("add-notebook").addEventListener("click", () => {
     updateNotebooksList();
   }
   document.getElementById("new-notebook-name").value = "";
+  if(screenWidth<=480){
+    createSection.style.display="none";
+    create.style.display="block";
+  }
+
 });
 
 // Delete notebook
@@ -162,6 +176,7 @@ function deleteNotebook(notebookName) {
   updateNotebooksList();
   notebooksSection.style.display = "block";
   notesSection.style.display = "none";
+  
 }
 
 // Update notebooks list
@@ -171,6 +186,7 @@ function updateNotebooksList() {
     const li = document.createElement("li");
     const h2=document.createElement("h2")
     h2.textContent = notebookName;
+    li.classList.add('cover1');
 
     // Add delete button
     const deleteBtn = document.createElement("button");
@@ -184,6 +200,24 @@ function updateNotebooksList() {
         deleteNotebook(notebookName);
       }
     });
+
+    // const selectedOption = form.cover.value;
+    // const selectedType = form.querySelector('input[name="cover"]:checked').dataset.type;
+  
+    // if (selectedOption) {
+    //   if (selectedType === 'image') {
+    //     li.style.backgroundImage = `url(${selectedOption})`;
+    //     li.style.backgroundColor = '';
+    //     li.style.backgroundSize = 'cover';
+    //   } else if (selectedType === 'color') {
+        
+    //     li.style.backgroundColor = selectedOption;
+    //   }
+    // } else {
+    //   li.style.backgroundImage = '';
+    // }
+  
+
     li.appendChild(h2)
     li.appendChild(deleteBtn);
     li.addEventListener("click", () => openNotebook(notebookName));

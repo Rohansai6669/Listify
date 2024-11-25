@@ -103,7 +103,6 @@ nav ul li button.active {
   display: none;
   min-height: 100%;
   min-width: 95%;
-
   background-color: #ffffff;
   color: rgb(0, 0, 0);
   border-radius: 15px;
@@ -223,6 +222,8 @@ nav ul li button.active {
 .flexarr {
   display: flex;
   flex-direction: row;
+  justify-content:right;
+  height: fit-content;
 }
 #noteele h1,
 h2 {
@@ -231,22 +232,41 @@ h2 {
 
 #noteele ul {
   list-style-type: none;
-
+  display: flex;
+  justify-content:baseline;
+  flex-wrap: wrap;
   padding: 0;
 }
 
 #noteele li {
-  max-width: 100%;
-  align-items: center;
+   background: url(cover1.png);
+   background-size: cover;
+  width: 200px;
+  height: 300px;
+  align-items: left;
   display: flex;
-  justify-content: space-between;
-  padding: 8px;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding-left: 50px;
   margin: 10px;
-  margin-left: 0px;
   background-color: #fff;
   border: 1px solid #ccc;
+  color: white;
   border-radius: 4px;
   cursor: pointer;
+} 
+
+#noteele li h2{
+  border: 1px solid black;
+  width: 100px;
+  background-color: bisque;
+  color: brown;
+  border-radius: 10px;
+  height: fit-content;
+  font-size: small;
+  padding: 10px;
+  word-wrap: break-word;
+  overflow: hidden;
 }
 
 #noteele button {
@@ -305,6 +325,60 @@ h2 {
   resize: none;
   margin-top: 10px;
 }
+#create{
+  background-color: blue;
+  color: white;
+  display: none;
+  margin: 0px;
+  
+}
+#create-section{
+  padding: 24px;
+  background-color: #0056b3;
+  color: white;
+  /* display: none; */
+  justify-content: space-between;
+  border-radius: 15px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.radio-group {
+  display: flex;
+  justify-content:space-between;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.radio-group label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.radio-group input[type="radio"] {
+  display: none;
+}
+
+.radio-group img, .radio-group .color {
+  width: 70px;
+  height: 70px;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.radio-group input[type="radio"]:checked + img, 
+.radio-group input[type="radio"]:checked + .color {
+  border-color: #007BFF;
+}
+
+.color {
+  display: inline-block;
+  border-radius: 8px;
+}
+
+
 
 @media (max-width: 480px) {
   body {
@@ -347,7 +421,8 @@ h2 {
     margin-left: 5%;
     margin-right: 5%;
     font-size: medium;
-    border-radius: 15px;
+    border-radius: 0px;
+    margin-top: 0px;
   }
   nav ul li button:hover {
     color: #ffffff;

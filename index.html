@@ -30,35 +30,81 @@
       </div>
       <div id="noteele">
         <div class="flexarr">
-        <div id="notebooks-section">
-          <h2>Notebooks</h2>
-          <input
-            type="text"
-            id="new-notebook-name"
-            placeholder="Notebook name"
-          />
-          <button id="add-notebook">Add Notebook</button>
-          <ul id="notebooks-list"></ul>
-        </div>
+          <div id="notebooks-section">
+            <div style="display: flex; flex-direction:row; ">
+            <h2>Notebooks</h2>
+            <button id="create" ><h2>+ Create</h2></button>
+          </div>
+            <div id="create-section" >
+                <div class="flexarr">
+              <div style="width:60%;">
+                <form id="coverForm">
+                  <h4>Select a Cover</h4>
+                  <div class="options">
+                    <!-- Image options -->
+                    <div class="radio-group">
+                      <label>
+                        <input type="radio" name="cover" value="https://via.placeholder.com/150/FF5733" data-type="image">
+                        <img src="https://via.placeholder.com/150/FF5733" alt="Cover 1">
+                      </label>
+                      <label>
+                        <input type="radio" name="cover" value="https://via.placeholder.com/150/33FF57" data-type="image">
+                        <img src="https://via.placeholder.com/150/33FF57" alt="Cover 2">
+                      </label>
+                      <label>
+                        <input type="radio" name="cover" value="https://via.placeholder.com/150/3357FF" data-type="image">
+                        <img src="https://via.placeholder.com/150/3357FF" alt="Cover 3">
+                      </label>
+                      <label>
+                        <input type="radio" name="cover" value="#FF5733" data-type="color">
+                        <div class="color" style="background-color: #FF5733;"></div>
+                      </label>
+                      <label>
+                        <input type="radio" name="cover" value="#33FF57" data-type="color">
+                        <div class="color" style="background-color: #33FF57;"></div>
+                      </label>
+                      <label>
+                        <input type="radio" name="cover" value="#3357FF" data-type="color">
+                        <div class="color" style="background-color: #3357FF;"></div>
+                      </label>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div style="width: 40%;">
+                <h4>NoteBook Name</h4>
+                <input
+                  type="text"
+                  id="new-notebook-name"
+                  placeholder="Notebook name"
+                  maxlength="20"
+                />
+                <button id="add-notebook">Add Notebook</button>
+               
+            </div>
+            </div>
+            </div>
+            <ul id="notebooks-list"></ul>
+          </div>
 
-        <div id="notes-section" >
-          <h2 id="selected-notebook-title"></h2>
-          <input
-            type="text"
-            id="new-note-content"
-            placeholder="New note content"
-          />
-          <button id="add-note">Add Note</button>
-          <ul id="notes-list"></ul>
-          <button id="back-to-notebooks">Back to Notebooks</button>
-        </div>
+          <div id="notes-section">
+            <h2 id="selected-notebook-title"></h2>
+            <input
+              type="text"
+              id="new-note-content"
+              placeholder="New note content"
+            />
+            <button id="add-note">Add Note</button>
+            <ul id="notes-list"></ul>
+            <button id="back-to-notebooks">Back to Notebooks</button>
+          </div>
 
-        <div id="note-view-section" style="display: none">
-          <h2>Note Details</h2>
-          <textarea id="note-content" style="height:650px;"></textarea>
-          <button id="update-note">Update Note</button>
-          <button id="back-to-notes">Back to Notes</button>
-        </div>
+          <div id="note-view-section" style="display: none">
+            <h2>Note Details</h2>
+            <textarea id="note-content" style="height: 650px"></textarea>
+            <button id="update-note">Update Note</button>
+            <button id="back-to-notes">Back to Notes</button>
+          </div>
         </div>
       </div>
       <div id="linksele">
