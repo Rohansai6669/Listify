@@ -4,6 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ToDo X Link Organizer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Croissant+One&family=Doto:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -37,23 +40,23 @@
           </div>
             <div id="create-section" >
                 <div class="flexarr">
-              <div style="width:60%;">
+              <div style="width:400px;">
                 <form id="coverForm">
                   <h4>Select a Cover</h4>
                   <div class="options">
                     <!-- Image options -->
                     <div class="radio-group">
                       <label>
-                        <input type="radio" name="cover" value="https://via.placeholder.com/150/FF5733" data-type="image">
-                        <img src="https://via.placeholder.com/150/FF5733" alt="Cover 1">
+                        <input type="radio" name="cover" value="cover2.jpg" data-type="image">
+                        <img src="cover2.jpg" alt="Cover 1">
                       </label>
                       <label>
-                        <input type="radio" name="cover" value="https://via.placeholder.com/150/33FF57" data-type="image">
-                        <img src="https://via.placeholder.com/150/33FF57" alt="Cover 2">
+                        <input type="radio" name="cover" value="cover3.jpg" data-type="image">
+                        <img src="cover3.jpg" alt="Cover 2">
                       </label>
                       <label>
-                        <input type="radio" name="cover" value="https://via.placeholder.com/150/3357FF" data-type="image">
-                        <img src="https://via.placeholder.com/150/3357FF" alt="Cover 3">
+                        <input type="radio" name="cover" value="cover4.jpg" data-type="image">
+                        <img src="cover4.jpg" alt="Cover 3">
                       </label>
                       <label>
                         <input type="radio" name="cover" value="#FF5733" data-type="color">
@@ -71,8 +74,8 @@
                   </div>
                 </form>
               </div>
-              <div style="width: 40%;">
-                <h4>NoteBook Name</h4>
+              <div style="width: 400px;">
+                <h4>New NoteBook</h4>
                 <input
                   type="text"
                   id="new-notebook-name"
@@ -95,15 +98,19 @@
               placeholder="New note content"
             />
             <button id="add-note">Add Note</button>
-            <ul id="notes-list"></ul>
             <button id="back-to-notebooks">Back to Notebooks</button>
+            <ul id="notes-list"></ul>
+           
           </div>
 
-          <div id="note-view-section" style="display: none">
+          <div id="note-view-section" style="display: none;">
             <h2>Note Details</h2>
-            <textarea id="note-content" style="height: 650px"></textarea>
-            <button id="update-note">Update Note</button>
+            <div style="display: flex; justify-content:space-between;">
             <button id="back-to-notes">Back to Notes</button>
+            <button id="update-note">Update Note</button>
+          </div>
+            <textarea id="note-content" style="height: 650px; margin: top 20px;"></textarea>
+            
           </div>
         </div>
       </div>

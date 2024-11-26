@@ -19,7 +19,7 @@ body {
 
 /* Header Styles */
 #header {
-  width: 15%;
+  width: 150px;
   z-index: 10;
   position: fixed;
   height: 100vh;
@@ -31,6 +31,7 @@ body {
   padding-top: 20px;
   padding-left: 40px;
   padding-right: 40px;
+  border: 1px solid black;
 }
 
 /* Title Styles */
@@ -81,11 +82,12 @@ nav ul li button.active {
 /* nav bar-mobile */
 
 .container {
-  margin-left: 20%;
+  margin-left: 250px;
   background-color: whitesmoke;
-  width: 80%;
+  width: 100%;
   min-height: 100%;
   /* padding: 50px; */
+
 }
 
 #todoele {
@@ -222,8 +224,9 @@ nav ul li button.active {
 .flexarr {
   display: flex;
   flex-direction: row;
-  justify-content:right;
+  justify-content:space-around;
   height: fit-content;
+  flex-wrap: wrap;
 }
 #noteele h1,
 h2 {
@@ -235,40 +238,47 @@ h2 {
   display: flex;
   justify-content:baseline;
   flex-wrap: wrap;
-  padding: 0;
+  padding-left: 30px;
 }
 
 #noteele li {
-   background: url(cover1.png);
+   /* background: url(cover3.jpg); */
    background-size: cover;
   width: 200px;
   height: 300px;
-  align-items: left;
+  align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  padding-left: 50px;
+  padding:20px;
   margin: 10px;
   background-color: #fff;
   border: 1px solid #ccc;
-  color: white;
-  border-radius: 4px;
+  color: black;
+  border-radius: 5px 40px 40px 5px;
   cursor: pointer;
 } 
 
 #noteele li h2{
   border: 1px solid black;
-  width: 100px;
-  background-color: bisque;
+  font-family: "Croissant One";
+  background-color:aliceblue;
   color: brown;
   border-radius: 10px;
+  /* min-height: 100px; */
   height: fit-content;
-  font-size: small;
+  width: 120px;
+  font-size: medium;
   padding: 10px;
-  word-wrap: break-word;
+  word-wrap:break-word;
+  text-align:center;
   overflow: hidden;
-}
 
+}
+#notes-list li{
+  border-radius: 14px;
+
+}
 #noteele button {
   margin-top: 10px;
   padding: 8px 16px;
@@ -361,8 +371,8 @@ h2 {
 }
 
 .radio-group img, .radio-group .color {
-  width: 70px;
-  height: 70px;
+  width: 50px;
+  height: 50px;
   border: 2px solid transparent;
   border-radius: 8px;
   object-fit: cover;
@@ -377,7 +387,29 @@ h2 {
   display: inline-block;
   border-radius: 8px;
 }
+/* 
+#notebooks-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 0;
+  list-style: none;
+} */
 
+
+#notes-list{
+  padding: 0px;
+  margin: 0px;
+}
+
+#notes-list li{
+  background:linear-gradient(to bottom, #e8d334, #f8d7a8);
+  color: black;
+  font-size: 24px;
+  text-wrap: wrap;
+  width: 350px;
+  height: 200px;
+}
 
 
 @media (max-width: 480px) {
@@ -441,6 +473,15 @@ h2 {
   #todoele {
     margin: 0;
   }
+
+  #noteele ul {
+    list-style-type: none;
+    display: flex;
+    justify-content:left;
+    flex-wrap: wrap;
+    padding-left: 0px;
+  }
+
   #notes-section {
     display: none;
     padding: 40px;
