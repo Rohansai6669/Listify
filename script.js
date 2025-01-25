@@ -392,7 +392,7 @@ function renderNotebooks() {
     const deleteBtn = document.createElement("button");
     deleteBtn.textContent = "Delete";
     deleteBtn.style.marginLeft = "10px";
-    deleteBtn.style.zIndex="1";
+    deleteBtn.style.zIndex="10";
     deleteBtn.onclick = () => deleteNotebook(name);
     li.appendChild(h2)
     li.appendChild(deleteBtn);
@@ -491,8 +491,9 @@ function deleteNotebook(notebookName) {
     saveNotebooks(); // Save updated data to localStorage
     if (selectedNotebook === notebookName) {
       selectedNotebook = null; // Clear selected notebook if it's the one being deleted
-      notesSection.style.display = "none";
       notebooksSection.style.display = "block";
+      notesSection.style.display = "none";
+      
     }
     renderNotebooks(); // Update the UI
   } else {
