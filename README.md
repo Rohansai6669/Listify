@@ -58,10 +58,6 @@ Try out the application live at: [https://rohansai6669.github.io/Listify/](https
 - JavaScript (ES6)
 - Browser localStorage for data persistence
 
-## Running the App
-
-Simply open the `index.html` file in any modern web browser (Chrome, Firefox, Edge, Safari). No server setup is required.
-
 ---
 
 Enjoy organizing your tasks, notes, and links with Listify!
